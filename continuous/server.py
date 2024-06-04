@@ -68,7 +68,7 @@ class Server:
         self.master.encoder.load_state_dict(global_weights_encoder)
         
         for w in self.worker_list:
-            w.critic = copy.deepcopy(self.master.critic)
+            # w.critic = copy.deepcopy(self.master.critic)
             w.network = copy.deepcopy(self.master.network)
             w.encoder = copy.deepcopy(self.master.encoder)
 
